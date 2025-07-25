@@ -291,80 +291,9 @@
             font-size: 0.75rem;
             color: var(--primary);
         }
-        
-        /* Particles Container */
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        
-        /* Live Typing Effect */
-        .typing-cursor::after {
-            content: '|';
-            display: inline-block;
-            margin-left: 2px;
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        
-        .about-text {
-            position: relative;
-        }
-        
-        .about-text p {
-            min-height: 1.5em; /* Maintain height while typing */
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Hosting Information */
-        .hosting-info {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        
-        .hosting-card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .hosting-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-        
-        .hosting-card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        
-        .hosting-steps {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        
-        .hosting-steps li {
-            margin-bottom: 8px;
-            list-style-type: decimal;
-        }
     </style>
 </head>
 <body class="relative overflow-x-hidden font-poppins">
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-    
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scroll-progress"></div>
     
@@ -385,7 +314,6 @@
                 <a href="#about" class="nav-link text-lg font-medium">About</a>
                 <a href="#projects" class="nav-link text-lg font-medium">Projects</a>
                 <a href="#contact" class="nav-link text-lg font-medium">Contact</a>
-                <a href="#hosting" class="nav-link text-lg font-medium">Hosting</a>
             </div>
             
             <div class="flex items-center space-x-4">
@@ -412,7 +340,6 @@
                 <a href="#about" class="nav-link text-center py-2">About</a>
                 <a href="#projects" class="nav-link text-center py-2">Projects</a>
                 <a href="#contact" class="nav-link text-center py-2">Contact</a>
-                <a href="#hosting" class="nav-link text-center py-2">Hosting</a>
             </div>
         </div>
     </nav>
@@ -466,7 +393,7 @@
         </div>
     </section>
     
-    <!-- About Section with Live Writing Effect -->
+    <!-- About Section -->
     <section id="about" class="py-20 px-4 relative section">
         <div class="container mx-auto max-w-6xl">
             <div class="glass p-10 rounded-3xl">
@@ -475,9 +402,16 @@
                         <h2 class="text-4xl font-bold mb-6">
                             About <span class="text-gradient">Me</span>
                         </h2>
-                        <div class="about-text space-y-6">
-                            <p id="about-para-1" class="text-xl"></p>
-                            <p id="about-para-2" class="text-xl"></p>
+                        <div class="space-y-6">
+                            <p class="text-xl">
+                                I'm a passionate web developer with expertise in creating modern, responsive websites 
+                                and applications. With over 5 years of experience, I specialize in frontend development 
+                                and UI/UX design.
+                            </p>
+                            <p class="text-xl">
+                                My approach combines technical excellence with creative problem-solving to deliver 
+                                solutions that not only look beautiful but also perform exceptionally well.
+                            </p>
                             <div class="flex flex-wrap gap-4 mt-8">
                                 <div class="glass-light px-6 py-3 rounded-full font-medium transform hover:-translate-y-1 transition">
                                     <i class="fas fa-check-circle text-green-400 mr-2"></i> Web Development
@@ -710,86 +644,6 @@
         </div>
     </section>
     
-    <!-- Hosting Information -->
-    <section id="hosting" class="py-20 px-4 relative section">
-        <div class="container mx-auto max-w-6xl">
-            <div class="glass p-10 rounded-3xl">
-                <h2 class="text-4xl font-bold mb-8 text-center">
-                    Free <span class="text-gradient">Hosting</span> Options
-                </h2>
-                <p class="text-xl text-gray-400 mb-10 text-center max-w-3xl mx-auto">
-                    Deploy your portfolio for free using these reliable services. All options support static websites and include free SSL certificates.
-                </p>
-                
-                <div class="hosting-info">
-                    <div class="hosting-card">
-                        <h3 class="text-2xl font-bold">GitHub Pages</h3>
-                        <p>Perfect for simple static sites with no backend</p>
-                        <ol class="hosting-steps">
-                            <li>Create a GitHub account at <a href="https://github.com" class="text-blue-400">github.com</a></li>
-                            <li>Create a new repository named <code>[your-username].github.io</code></li>
-                            <li>Upload your HTML file as <code>index.html</code></li>
-                            <li>Your site will be live at <code>https://[your-username].github.io</code></li>
-                        </ol>
-                        <div class="flex justify-between mt-4">
-                            <span class="glass-light px-3 py-1 rounded-full">Free Forever</span>
-                            <span class="glass-light px-3 py-1 rounded-full">No Server Required</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hosting-card">
-                        <h3 class="text-2xl font-bold">Netlify</h3>
-                        <p>Feature-rich hosting with continuous deployment</p>
-                        <ol class="hosting-steps">
-                            <li>Create a Netlify account at <a href="https://netlify.com" class="text-blue-400">netlify.com</a></li>
-                            <li>Connect your GitHub/GitLab repository</li>
-                            <li>Netlify will automatically detect your site</li>
-                            <li>Click deploy - no configuration needed</li>
-                            <li>Your site will be live at <code>[your-site-name].netlify.app</code></li>
-                        </ol>
-                        <div class="flex justify-between mt-4">
-                            <span class="glass-light px-3 py-1 rounded-full">Free SSL</span>
-                            <span class="glass-light px-3 py-1 rounded-full">Continuous Deployment</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hosting-card">
-                        <h3 class="text-2xl font-bold">Vercel</h3>
-                        <p>Modern hosting platform with global CDN</p>
-                        <ol class="hosting-steps">
-                            <li>Create a Vercel account at <a href="https://vercel.com" class="text-blue-400">vercel.com</a></li>
-                            <li>Import your GitHub/GitLab repository</li>
-                            <li>Vercel will detect your static site</li>
-                            <li>Click deploy - no configuration needed</li>
-                            <li>Your site will be live at <code>[your-site-name].vercel.app</code></li>
-                        </ol>
-                        <div class="flex justify-between mt-4">
-                            <span class="glass-light px-3 py-1 rounded-full">Global CDN</span>
-                            <span class="glass-light px-3 py-1 rounded-full">Preview Deployments</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hosting-card">
-                        <h3 class="text-2xl font-bold">Cloudflare Pages</h3>
-                        <p>Fast, secure hosting with unlimited bandwidth</p>
-                        <ol class="hosting-steps">
-                            <li>Create a Cloudflare account at <a href="https://pages.cloudflare.com" class="text-blue-400">pages.cloudflare.com</a></li>
-                            <li>Connect your Git provider (GitHub/GitLab)</li>
-                            <li>Select your repository</li>
-                            <li>Set build settings to "Static site"</li>
-                            <li>Deploy your site</li>
-                            <li>Your site will be live at <code>[your-site-name].pages.dev</code></li>
-                        </ol>
-                        <div class="flex justify-between mt-4">
-                            <span class="glass-light px-3 py-1 rounded-full">Unlimited Bandwidth</span>
-                            <span class="glass-light px-3 py-1 rounded-full">Free SSL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Footer -->
     <footer class="py-12 px-4 relative">
         <div class="container mx-auto max-w-6xl">
@@ -834,99 +688,13 @@
         <i class="fas fa-arrow-up"></i>
     </a>
     
-    <!-- Particles.js Library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
     <script>
-        // Initialize particles.js
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#6366f1" },
-                shape: { type: "circle" },
-                opacity: { value: 0.3, random: true },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#8b5cf6",
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
-
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
             const progressBar = document.getElementById('scroll-progress');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuToggle = document.getElementById('menu-toggle');
-            
-            // About section paragraphs
-            const aboutPara1 = document.getElementById('about-para-1');
-            const aboutPara2 = document.getElementById('about-para-2');
-            
-            // Text for about section
-            const aboutText1 = "I'm a passionate web developer with expertise in creating modern, responsive websites and applications. With over 5 years of experience, I specialize in frontend development and UI/UX design.";
-            const aboutText2 = "My approach combines technical excellence with creative problem-solving to deliver solutions that not only look beautiful but also perform exceptionally well.";
-            
-            // Flag to track if about text has been animated
-            let aboutAnimated = false;
-            
-            // Live typing function
-            function typeText(element, text, speed, callback) {
-                let i = 0;
-                element.classList.add('typing-cursor');
-                
-                function type() {
-                    if (i < text.length) {
-                        element.textContent += text.charAt(i);
-                        i++;
-                        setTimeout(type, speed);
-                    } else {
-                        element.classList.remove('typing-cursor');
-                        if (callback) callback();
-                    }
-                }
-                
-                type();
-            }
-            
-            // Animate about section text
-            function animateAboutText() {
-                if (aboutAnimated) return;
-                aboutAnimated = true;
-                
-                // Clear existing content
-                aboutPara1.textContent = '';
-                aboutPara2.textContent = '';
-                
-                // Start typing effect
-                typeText(aboutPara1, aboutText1, 30, function() {
-                    setTimeout(() => {
-                        typeText(aboutPara2, aboutText2, 30);
-                    }, 500);
-                });
-            }
             
             window.addEventListener('scroll', () => {
                 let current = '';
@@ -944,11 +712,6 @@
                     
                     if (scrollPosition >= (sectionTop - sectionHeight / 3)) {
                         current = section.getAttribute('id');
-                        
-                        // Animate about section when it comes into view
-                        if (current === 'about' && !aboutAnimated) {
-                            animateAboutText();
-                        }
                     }
                 });
                 
